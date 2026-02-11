@@ -163,7 +163,9 @@ Acesse: **http://localhost:8000**
 
 ## 🎨 Capturas de Tela
 
-_Adicione aqui capturas de tela da interface do projeto_
+<p align="center">
+  <img src="assets/Captura de tela 2026-02-11 165329.png" alt="Snapshot do Taskflow com IA" width="100%">
+</p>
 
 ---
 
@@ -201,5 +203,5 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 ---
 
 <p align="center">
-  Feito com ❤️ e IA
+  Feito com café e IA
 </p>

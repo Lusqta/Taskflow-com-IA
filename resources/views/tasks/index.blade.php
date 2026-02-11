@@ -13,14 +13,15 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
         
         .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
 
         .glass-input {
@@ -75,8 +76,8 @@
         <!-- Add Task Form -->
         <form action="{{ route('tasks.store') }}" method="POST" class="flex w-full sm:w-auto gap-2 flex-col lg:flex-row items-center">
             @csrf
-            <input type="text" name="title" placeholder="Nova tarefa..." class="glass-input px-4 py-2 rounded-lg placeholder-gray-400 w-full sm:w-64 transition-all" required>
-            <input type="text" name="description" placeholder="Detalhes..." class="glass-input px-4 py-2 rounded-lg placeholder-gray-400 w-full sm:w-64 transition-all">
+            <input type="text" name="title" placeholder="Nova tarefa..." class="glass-input px-4 py-2 rounded-lg placeholder-gray-300 w-full sm:w-64 transition-all" required>
+            <input type="text" name="description" placeholder="Detalhes..." class="glass-input px-4 py-2 rounded-lg placeholder-gray-300 w-full sm:w-64 transition-all">
             <select name="priority" class="glass-input px-4 py-2 rounded-lg bg-gray-900/50 text-white w-full sm:w-32 transition-all cursor-pointer">
                 <option value="low">Baixa</option>
                 <option value="medium" selected>Média</option>
@@ -192,10 +193,10 @@
                             <!-- Conteúdo do card -->
                             <div class="pl-10">
                                 <h3 class="font-bold text-white text-lg pr-12">{{ $task->title }}</h3>
-                                <p class="text-gray-300 text-sm mt-2 leading-relaxed">{{ $task->description ?: 'Sem descrição detalhada.' }}</p>
+                                <p class="text-white text-sm mt-2 leading-relaxed font-medium">{{ $task->description ?: 'Sem descrição detalhada.' }}</p>
 
                                 <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
-                                    <span class="text-xs text-gray-400 font-mono">{{ $task->created_at->format('d/m H:i') }}</span>
+                                    <span class="text-xs text-gray-200 font-mono font-semibold">{{ $task->created_at->format('d/m H:i') }}</span>
                                     <div class="opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
                                         <button onclick="openEditModal(JSON.parse(this.getAttribute('data-task')))" data-task="{{ $task }}" class="text-gray-400 hover:text-white transition p-1 hover:bg-white/10 rounded" title="Editar">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -223,7 +224,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-12 text-center text-gray-400 text-sm glass px-6 py-2 rounded-full">
+    <footer class="mt-12 text-center text-gray-100 text-sm glass px-6 py-2 rounded-full">
         <p>&copy; {{ date('Y') }} TaskFlow IA &bull; Feito com Laravel & Tailwind &bull; Liquid Glass UI </p>
     </footer>
 
@@ -240,17 +241,17 @@
                 
                 <div class="space-y-5">
                     <div>
-                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1 font-semibold">Título</label>
+                        <label class="block text-xs uppercase tracking-wider text-gray-200 mb-1 font-semibold">Título</label>
                         <input type="text" name="title" id="editTitle" class="glass-input w-full px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-500/50 transition-all" required>
                     </div>
                     
                     <div>
-                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1 font-semibold">Descrição</label>
+                        <label class="block text-xs uppercase tracking-wider text-gray-200 mb-1 font-semibold">Descrição</label>
                         <textarea name="description" id="editDescription" class="glass-input w-full px-4 py-2 rounded-lg h-24 focus:ring-2 focus:ring-orange-500/50 transition-all"></textarea>
                     </div>
                     
                     <div>
-                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1 font-semibold">Prioridade</label>
+                        <label class="block text-xs uppercase tracking-wider text-gray-200 mb-1 font-semibold">Prioridade</label>
                         <select name="priority" id="editPriority" class="glass-input w-full px-4 py-2 rounded-lg bg-gray-900/50 text-white focus:ring-2 focus:ring-orange-500/50 transition-all">
                             <option value="low">Baixa</option>
                             <option value="medium">Média</option>
