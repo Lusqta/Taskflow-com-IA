@@ -1,59 +1,205 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎯 Taskflow com IA
+
+
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=flat&logo=laravel&logoColor=white" alt="Laravel 12" />
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=php&logoColor=white" alt="PHP 8.2" />
+  <img src="https://img.shields.io/badge/Tailwind-4.0-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="Tailwind 4" />
+  <img src="https://img.shields.io/badge/Licença-MIT-green.svg" alt="Licença MIT" />
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Sobre o Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Taskflow com IA** é um gerenciador de tarefas no estilo Kanban que utiliza inteligência artificial para priorizar automaticamente suas atividades. Com uma interface **Liquid Glass** elegante e animações fluidas, o sistema analisa suas tarefas e sugere prioridades estratégicas baseadas em impacto e urgência.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A IA (via **Groq API** com modelo **LLaMA 3.3 70B**) atua como um Tech Lead experiente, avaliando cada tarefa do backlog e classificando-as em Alta, Média ou Baixa prioridade, junto com insights sobre a decisão.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Recursos Principais
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+✅ **Quadro Kanban Interativo**
+- Arrastar e soltar fluido entre colunas (A Fazer → Em Progresso → Concluído)
+- Contadores em tempo real
+- Animações suaves com transições CSS
 
-## Laravel Sponsors
+✅ **IA para Priorização Automática**
+- Analisa título e descrição de cada tarefa
+- Classifica com base em impacto sistêmico e bloqueio
+- Fornece raciocínio estratégico
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+✅ **Design Liquid Glass**
+- Glassmorphism com efeito de desfoque
+- Paleta de cores harmoniosa (âmbar/laranja)
+- Totalmente responsivo
 
-### Premium Partners
+✅ **Gestão Completa de Tarefas**
+- Criação rápida com prioridade manual
+- Edição inline
+- Exclusão com confirmação
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🛠️ Tecnologias Utilizadas
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Backend
+- **Laravel 12** - Framework PHP moderno
+- **PHP 8.2** - Linguagem de programação
+- **SQLite** - Banco de dados leve
 
-## Code of Conduct
+### Frontend
+- **Tailwind CSS 4** - Framework CSS utility-first
+- **Vite** - Ferramenta de build e servidor de desenvolvimento
+- **SortableJS** - Biblioteca de arrastar e soltar
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Inteligência Artificial
+- **Groq API** - Infraestrutura de inferência rápida
+- **LLaMA 3.3 70B Versatile** - Modelo de linguagem
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📦 Pré-requisitos
 
-## License
+Antes de começar, certifique-se de ter instalado:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **PHP** >= 8.2
+- **Composer** (gerenciador de dependências PHP)
+- **Node.js** >= 18 e **NPM**
+- **Conta Groq** (gratuita) para obter a chave da API
+
+---
+
+## 🚀 Instalação
+
+### 1. Clone o Repositório
+
+```bash
+git clone https://github.com/seu-usuario/taskflow-ia.git
+cd taskflow-ia
+```
+
+### 2. Instale as Dependências
+
+```bash
+# Dependências PHP
+composer install
+
+# Dependências Node
+npm install
+```
+
+### 3. Configure o Ambiente
+
+```bash
+# Copie o arquivo de exemplo
+cp .env.example .env
+
+# Gere a chave da aplicação
+php artisan key:generate
+```
+
+### 4. Configure a Chave da API Groq
+
+Edite o arquivo `.env` e adicione sua chave:
+
+```env
+GROQ_API_KEY=sua_chave_aqui
+```
+
+> **Como obter a chave Groq:**
+> 1. Acesse [console.groq.com](https://console.groq.com)
+> 2. Crie uma conta gratuita
+> 3. Vá em **API Keys** e gere uma nova chave
+> 4. Cole no arquivo `.env`
+
+### 5. Execute as Migrações
+
+```bash
+php artisan migrate
+```
+
+### 6. Inicie o Servidor
+
+```bash
+# Usando o script composer (recomendado)
+composer run dev
+
+# OU manualmente em terminais separados:
+php artisan serve
+npm run dev
+```
+
+Acesse: **http://localhost:8000**
+
+---
+
+## 📖 Como Usar
+
+### Criar uma Tarefa
+1. Preencha os campos no topo (Título, Descrição, Prioridade)
+2. Clique em **+ Adicionar**
+3. A tarefa aparecerá na coluna "A Fazer"
+
+### Organizar com IA
+1. Clique no botão **"Deixar a IA organizar"**
+2. Aguarde alguns segundos
+3. As tarefas serão automaticamente repriorizadas
+4. Veja o insight estratégico exibido no topo
+
+### Mover Tarefas
+- Arraste pelo ícone de **grip** (⁞⁞) no lado esquerdo do card
+- Solte na coluna desejada
+- Os contadores atualizam instantaneamente
+
+### Editar/Excluir
+- Passe o mouse sobre um card
+- Clique no ícone de **lápis** para editar
+- Clique na **lixeira** para excluir
+
+---
+
+## 🎨 Capturas de Tela
+
+_Adicione aqui capturas de tela da interface do projeto_
+
+---
+
+## 🤖 Personalização da IA
+
+### Alterar o Modelo
+
+Edite `app/Services/AIService.php` na linha 54:
+
+```php
+'model' => 'llama-3.3-70b-versatile', // Troque por outro modelo Groq
+```
+
+Modelos disponíveis: [Lista de Modelos Groq](https://console.groq.com/docs/models)
+
+### Ajustar os Prompts
+
+Modifique as variáveis `$systemPrompt` e `$userPrompt` no mesmo arquivo para alterar o comportamento da IA.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🙏 Créditos
+
+- **Laravel Framework** - [laravel.com](https://laravel.com)
+- **Groq** - Infraestrutura de IA ultrarrápida
+- **SortableJS** - Biblioteca de arrastar e soltar
+- **Tailwind CSS** - Framework CSS
+
+---
+
+<p align="center">
+  Feito com ❤️ e IA
+</p>
